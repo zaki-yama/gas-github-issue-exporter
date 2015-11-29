@@ -97,7 +97,7 @@ function getCallbackURL(callbackFunction) {
 
 function getRepos() {
   var gitHubService = getGitHubService();
-  var response = UrlFetchApp.fetch('https://api.github.com/users/' + USERNAME + '/repos', {
+  var response = UrlFetchApp.fetch('https://api.github.com/users/' + USERNAME + '/repos?per_page=100', {
     headers: {
       Authorization: 'Bearer ' + gitHubService.getAccessToken()
     }
@@ -128,7 +128,7 @@ function export(form) {
 
 function getIssues(repo) {
   var gitHubService = getGitHubService();
-  var response = UrlFetchApp.fetch('https://api.github.com/repos/' + USERNAME + '/' + repo + '/issues', {
+  var response = UrlFetchApp.fetch('https://api.github.com/repos/' + USERNAME + '/' + repo + '/issues?per_page=100', {
     headers: {
       Authorization: 'Bearer ' + gitHubService.getAccessToken()
     }
