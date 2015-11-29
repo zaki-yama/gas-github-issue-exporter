@@ -6,7 +6,7 @@ var ISSUE_PROPERTIES = ['number', 'title', 'url'];
 
 function onOpen() {
   SpreadsheetApp.getUi()
-    .createMenu('Dialog')
+    .createMenu('GitHub')
     .addItem('Authorize', 'openAuthDialog')
     .addItem('Export', 'openExportDialog')
     .addToUi();
