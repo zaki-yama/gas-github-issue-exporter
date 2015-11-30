@@ -2,7 +2,7 @@ var CLIENT_ID = 'YOUR_CLIENT_ID',
     CLIENT_SECRET = 'YOUR_CLIENT_SECRET',
     USERNAME = 'YOUR_GITHUB_USERNAME';
 
-var ISSUE_PROPERTIES = ['number', 'title', 'url'];
+var ISSUE_PROPERTIES = ['number', 'title', 'html_url'];
 
 function onOpen() {
   SpreadsheetApp.getUi()
